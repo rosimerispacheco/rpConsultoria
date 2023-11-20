@@ -1,0 +1,380 @@
+/* ZERA QUALQUER CONFIGURAÇÃO PRÉ ESTABELECIDA PELO NAVEGADOR */
+* {
+  margin: 0; /* RETIRA AS MARGENS */
+  padding: 0; /* ESPAÇO INTERNO */
+  box-sizing: border-box; /* PREENCHIMENTO E BORDA ALTURA E LARGURA */
+}
+
+body{
+ display: flex;
+ margin: 3px;
+ /*Para os elementos ficarem um embaixo do outro é utilizado a propriedade FLEX-WRAP no container pai */
+ flex-wrap: wrap;
+ font-family: 'EB Garamond', serif;
+ /* flex-grow: Habilidade de um flex crescer FLEX-GROW: 0*/
+ /* flex-shrink: Capacidade de redução do item  FLEX-SHRINK: 1*/
+ /* flex-basis: Tamanho inicial do item FLEX-BASIS: AUTO*/
+ flex: 1 1 100vw; /* Corresponde a 100% da largura horizontal*/
+ background: rgba(222, 228, 228, 0.767);
+}
+header{
+  display: flex;
+  margin: 3px;
+  flex: 1 1 100vw;
+  background: rgb(222, 228, 228);
+}
+
+header #logo{
+  flex: 0 1 200px; /* Ele não irá crescer, redução padrão 1 e tamanho inicial com 200px */
+  background-color: rgb(222, 228, 228);
+ }
+
+#logo img{
+  width: 100px;
+ }
+
+/* Configurando o X e as três traços */
+#openMenu, #closeMenu{
+  border: none; /* Remover a configuração padrão */
+  color: #070707;
+  background: none; /* Remover a configuração padrão */
+  font-size: 30px;
+  font-weight: bold;
+  padding: 0px 5px 0px; /*  */
+  cursor: pointer;
+  display: none; /* ocultar a visualização */
+}
+nav{
+  display: flex;
+  margin: 3px;
+  flex: 1 1 100vw; /* Alterado para ter 100% do espaço da largura horizontal*/
+
+  align-items: center;/* centraliza verticalmente */
+  justify-content: flex-end; /* Alinha o menu a direita*/
+  background-color: rgb(222, 228, 228);
+}
+nav a{
+  margin: 3%; /* os items do menu terão a margin de 3% */
+  font-size: 20pt;
+}
+a{
+  text-decoration: none; /* retira o sublinhado */
+  color: inherit; /* deixa a mesma cor do elemento pai */
+}
+main{
+  display: flex;
+  margin: 3px;
+  flex: 20 1 500px; /* alterado para 500px antes estava 100vw  e para 20 que indica que ele irá crescer 200x mais*/
+  background-color: rgb(222, 228, 228);
+ /*  height: calc(100vh - 224px); */ /* caber na pagina - (margin + margin) x4 = 24px. + 200px header e footer */
+  /* Conteudo dentro do main */
+  flex-wrap: wrap;
+  overflow: auto;
+  text-align: justify;
+}
+main section{
+  width: 100%;
+  margin: 10px;
+}
+aside{
+  display: flex;
+  margin: 3px;
+  flex: 1 1 200px; /* alterado para 200px antes estava 100vw */
+  background-color: rgb(222, 228, 228);
+}
+/* CONFIGURAÇÃO DO GRID */
+.pai{
+  display: grid;
+  grid-template-rows: 2fr 2fr 1fr 2fr 2fr 1fr 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  gap: 3px;
+  width: 400px;
+  height: auto;
+
+  grid-template-areas:
+  "foto1 foto2"
+  "foto1 foto4"
+  "foto1 foto3"
+  "foto5 foto3"
+  "foto8 foto3"
+  "foto8 foto7"
+  "foto6 foto7"
+  "foto6 foto9"
+  "foto6 foto9"
+  "foto6 .";
+}
+.filho{
+   box-sizing: border-box;
+}
+
+.foto-1{
+  grid-area: foto1;
+  background-image: url(./assets/imagens/foto1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.foto-2{
+  grid-area: foto2;
+  background-image: url(./assets/imagens/foto2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.foto-3{
+  grid-area: foto3;
+  background-image: url(./assets/imagens/foto3.jpg);
+  background-position: right;
+  background-size: cover;
+}
+.foto-4{
+  grid-area: foto4;
+  background-image: url(./assets/imagens/foto4.jpg);
+  background-position: center;
+  background-size: 100%;
+}
+.foto-5{
+  grid-area: foto5;
+  background-image: url(./assets/imagens/foto5.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.foto-6{
+  grid-area: foto6;
+  background-image: url(./assets/imagens/foto6.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.foto-7{
+  grid-area: foto7;
+  background-image: url(./assets/imagens/foto7.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.foto-8{
+  grid-area: foto8;
+  background-image: url(./assets/imagens/foto8.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.foto-9{
+  grid-area: foto9;
+  background-image: url(./assets/imagens/foto9.jpg);
+  background-position: center;
+  background-size: cover;
+}
+/* ENDEREÇO */
+.endereco{
+  box-sizing: border-box;
+}
+/* FORMULARIO  CONTATO*/
+.container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 400px; /* Define a largura máxima do formulário */
+  margin: 0 auto; /* Centraliza o formulário */
+}
+
+label,
+input,
+textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.map-container {
+  margin-top: 20px;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+button {
+  background-color: #141414;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #575857;
+}
+
+/* CARROSSEL */
+.main-carrossel{
+  justify-content: center;
+}
+.carrossel-container {
+  width: 62%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.carrossel {
+  display: flex;
+  transition: transform 0.5s ease;
+  max-width: 100%;
+}
+
+.video {
+  min-width: 300px; /* Define uma largura mínima para os vídeos */
+  max-width: 100%;
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+iframe {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+/* CARD */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.card {
+  border-radius: 5px;
+  box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+  width: 30%;
+  margin: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+.card:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+.card p {
+  color: #070707;
+  font-size: 16px;
+}
+
+.image {
+  float: right;
+  max-width: 64px;
+  max-height: 64px;
+}
+.blue {
+  border-left: 3px solid #4895ff;
+}
+
+.green {
+  border-left: 3px solid #3bb54a;
+}
+
+.red {
+  border-left: 3px solid #b3404a;
+}
+/* RODAPÉ */
+footer{
+  display: flex;
+  margin: 3px;
+  flex: 1 1 100vw;
+  background-color: rgb(222, 228, 228);
+  height: 50px;
+  align-items: center;
+  font-weight: 600;
+}
+
+/* Responsividade */
+/* Largura e altura da janela de visualização */
+/* Largura e altura do dispositivo*/
+/* Orientação (o tablet / smartphone está no modo paisagem ou retrato) */
+/* Resolução */
+
+/* opção abaixo vai verificar se o tamanho da tela NÃO é maior que 923px */
+@media only screen and (max-width: 923px){
+  header{
+    order:0;
+  }
+  main{
+   /*  height:calc(100vh - 330px); */   /* Essa alteração permite que em tela menor main e aside sejam flexiveis */
+    order:1;
+    text-align: justify;
+  }
+  aside{
+    flex: 1 1 100vw;
+   /*  height: 100px;  */ /* permite que o aside vá para baixo do main com uma altura fixa minima definida*/
+    order: 2;
+    text-align: justify;
+  }
+  footer{
+    order:3;
+
+  }
+  aside{
+    justify-content: center;
+  }
+  .pai{
+    height: 550px;
+  }
+}
+/* configuração do menu mobile */
+@media only screen and (max-width: 717px){
+  #openMenu, #closeMenu{
+    display: block;
+  }
+  /* configuração para posicionar os tres traços */
+  #openMenu{
+    margin-left: auto ;/* usará todo o espaço não utilizado pelo menu */
+
+  }
+  /* configuração para posicionar o X */
+  #closeMenu{
+    position: fixed;/* posição fixa com relação ao container */
+    right: 15px; /* alinha o X no topo direito */
+    top: 15px; /* alinha o X no topo direito */
+  }
+  nav{
+    position: fixed; /* fica sobreposto aos temais itens da pagina */
+    flex-direction: column; /* Itens ficaram em coluna */
+    z-index: 1;
+    width:100vw;/* ocupará 100% da largura */
+    height: 100vh;  /* ocupará 100% da altura da pagina */
+    background: rgba(224, 221, 221, 0.9); /* transparencia 0.8 */
+    align-items: center;/* alinha os itens na horizontal */
+    justify-content: center;/* alinha verticalmente */
+    margin: 0;/* remover todas as margens */
+    display: none; /* oculta a visualização */
+    opacity: 0;/* transição */
+    transition: 0.3s; /* tempo dessa transição */
+  }
+  iframe {
+    width: 100%;
+    height: 350px;
+  }
+  .pai{
+    height: 550px;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .card {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+

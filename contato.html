@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/imagens/LOGO3.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <title>Grupo rP</title>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header>
+    <a href="index.html" id="logo"><img src="./assets/imagens/LOGO3.png" alt="" ></a>
+
+    <!-- botão -->
+    <!-- Esse código do menu, é chamado Miscellaneous Symbols -->
+    <button id="openMenu">&#9776;</button>
+    <!-- Menu -->
+    <nav id="menu">
+      <button id="closeMenu">X</button>
+      <a href="index.html">Home</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="#">Contato</a>
+      <a href="videos.html">Vídeos</a>
+    </nav>
+  </header>
+
+  <!-- Contém links, conteudos do Assunto Principal -->
+  <aside>
+    <div>
+      <p class="endereco">Nosso Endereço: <br>
+      Rua: Imigrante Venson, 755. <br>
+      Bairro Pinheirinho. Criciúma-SC <br>
+      Cep 88805-200 <br>
+      Email: contato@consultoriarp.com.br <br>
+      Telefone: (48) 991841113
+      </p>
+    </div>
+
+  </aside>
+
+  <!-- Conteudo Principal do Site -->
+  <main>
+
+    <section class="container">
+
+      <form>
+        
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+
+        <div class="map-container">
+            <label>Localização:</label>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111958.83901526842!2d-49.44989468067714!3d-28.72810038836934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952181e2d391d045%3A0x5333d655f0ed7675!2zQ3JpY2nDum1hLCBTQywgQnJhc2ls!5e0!3m2!1spt-BR!2sca!4v1699212331168!5m2!1spt-BR!2sca"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+    </form>
+    </section>
+  </main>
+   <!-- Rodapé do Site -->
+  <footer>Segurança e Planejamento. Copyright @2023 Rosimeri Pacheco</footer>
+
+  <!-- javascript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
